@@ -1,15 +1,15 @@
+# wrangler.toml
 name = "my-online-store"
 type = "javascript"
-
-# Define routes for your functions
-[env.production]
-name = "samurai-heat-online-store"
-route = "https://samurai-heat-online-store.pages.dev/*"
-zone_id = "5785b34db93f51d881ad02cb105d0dd3"
 
 [build]
 command = "npm run build"
 upload_format = "modules"
+pages_build_output_dir = "build"
+
+[env.production]
+zone_id = "5785b34db93f51d881ad02cb105d0dd3"  # Replace with your actual Zone ID
+route = "https://samurai-heat-online-store.pages.dev/*"  # Replace with your actual domain
 
 [[routes]]
 pattern = "/api/create-checkout-session"
