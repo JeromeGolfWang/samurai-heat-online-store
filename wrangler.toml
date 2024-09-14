@@ -1,14 +1,14 @@
 # wrangler.toml
-name = "my-online-store"
+name = "samurai-heat-online-store"
 type = "javascript"
 
 [build]
 command = "npm run build"
 upload_format = "modules"
-pages_build_output_dir = "build"
+pages_build_output_dir = "build"  # Specifies where the built frontend assets are located
 
 [env.production]
-zone_id = "5785b34db93f51d881ad02cb105d0dd3"  # Replace with your actual Zone ID
+zone_id = "5785b34db93f51d881ad02cb105d0dd3"        # Replace with your actual Cloudflare Zone ID
 route = "https://samurai-heat-online-store.pages.dev/*"  # Replace with your actual domain
 
 [[routes]]
