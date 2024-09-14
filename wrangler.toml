@@ -1,0 +1,20 @@
+name = "my-online-store"
+type = "javascript"
+
+# Define routes for your functions
+[env.production]
+name = "my-online-store-production"
+route = "https://yourdomain.com/*"
+zone_id = "YOUR_CLOUDFLARE_ZONE_ID"
+
+[build]
+command = "npm run build"
+upload_format = "modules"
+
+[[routes]]
+pattern = "/api/create-checkout-session"
+script = "create-checkout-session"
+
+[[routes]]
+pattern = "/api/fulfill-order"
+script = "fulfill-order"
