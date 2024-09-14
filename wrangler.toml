@@ -3,9 +3,9 @@ type = "javascript"
 
 # Define routes for your functions
 [env.production]
-name = "my-online-store-production"
-route = "https://yourdomain.com/*"
-zone_id = "YOUR_CLOUDFLARE_ZONE_ID"
+name = "samurai-heat-online-store"
+route = "https://samurai-heat-online-store.pages.dev/*"
+zone_id = "5785b34db93f51d881ad02cb105d0dd3"
 
 [build]
 command = "npm run build"
